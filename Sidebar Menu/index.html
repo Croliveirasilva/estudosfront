@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curvas em tab ativa | Menu lateral</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Home</span>
+                    </a>
+
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <span class="title">perfil</span>
+                    </a>
+
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatboxes"></ion-icon></span>
+                        <span class="title">Mensagem</span>
+                    </a>
+
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="settings"></ion-icon></span>
+                        <span class="title">Configurações</span>
+                    </a>
+
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="help"></ion-icon></span>
+                        <span class="title">Ajuda</span>
+                    </a>
+
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                        <span class="title">Senha</span>
+                    </a>
+
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out"></ion-icon></span>
+                        <span class="title">Sair</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+        <script>
+            let list = document.querySelectorAll('.list');
+            for(let i =0; i<list.length; i++){
+                list[i].onclick=function(){
+                    let j =0
+                    while(j<list.length){
+                        list[j++].className= 'list';
+                    }
+                    list[i].className= 'list active';
+                }
+            }
+        </script>
+    </body>
+</html>
