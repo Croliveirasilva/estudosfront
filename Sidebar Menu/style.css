@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@media print {
+    html, body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    #printable {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 14px;
+    }
+    #printable ~ * {
+        display: none;
+    }
+}
 *
 {
     margin:0;
