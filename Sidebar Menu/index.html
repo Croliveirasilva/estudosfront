@@ -5,7 +5,7 @@
         <title>Curvas em tab ativa | Menu lateral</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body>
+    <body id="#printable">
         <div class="navigation">
             <ul>
                 <li class="list active">
@@ -62,6 +62,20 @@
         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
         <script>
+            
+            function printBy(selector){
+    var $print = $(selector)
+        .clone()
+        .addClass('print')
+        .prependTo('body');
+
+    // Stop JS execution
+    window.print();
+
+    // Remove div once printed
+    $print.remove();
+}
+            
             let list = document.querySelectorAll('.list');
             for(let i =0; i<list.length; i++){
                 list[i].onclick=function(){
